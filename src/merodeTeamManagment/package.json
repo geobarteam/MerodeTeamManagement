@@ -1,0 +1,58 @@
+{
+  "name": "merode",
+  "version": "0.0.1",
+  "description": "Hockey Club Merode Web App",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geobarteam/merodeTeam.git"
+  },
+  "author": "Geoffrey Vandiest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geobarteam/merode/issues"
+  },
+  "homepage": "https://github.com/geobarteam/merode#readme",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "@angular/upgrade": "2.0.0-rc.1",
+    "angular2-in-memory-web-api": "0.0.10",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "core-js": "^2.4.0",
+    "jquery": "2.2.4",
+    "lodash": "~4.11.1",
+    "mongoose": "^4.4.20",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "0.19.27",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "0.1.7",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.4",
+    "gulp-uglify": "1.2.0",
+    "jasmine-core": "2.4.1",
+    "lite-server": "^2.2.0",
+    "merge": "^1.2.0",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.2.1",
+    "typescript": "^1.8.10"
+  }
+}
