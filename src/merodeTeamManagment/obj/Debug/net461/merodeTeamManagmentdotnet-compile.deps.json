@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/",
-    "signature": "9d7fb653ac4235c6519f6cd4d55d9c8937003779"
+    "signature": "11d9bda5d5c5a57e556808143f3bfb2d53bded06"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.Extensions.Logging": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+          "mongocsharpdriver": "2.2.4"
         },
         "compile": {
           "merodeTeamManagment.exe": {}
@@ -828,6 +829,38 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.0.1": {},
+      "mongocsharpdriver/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4",
+          "MongoDB.Driver": "2.2.4",
+          "MongoDB.Driver.Core": "2.2.4"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.Legacy.dll": {}
+        }
+      },
+      "MongoDB.Bson/2.2.4": {
+        "compile": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4",
+          "MongoDB.Driver.Core": "2.2.4"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4"
+        },
+        "compile": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -1211,7 +1244,8 @@
           "Microsoft.Extensions.Logging": "1.0.0",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+          "mongocsharpdriver": "2.2.4"
         },
         "runtime": {
           "merodeTeamManagment.exe": {}
@@ -2008,6 +2042,38 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.0.1": {},
+      "mongocsharpdriver/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4",
+          "MongoDB.Driver": "2.2.4",
+          "MongoDB.Driver.Core": "2.2.4"
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.Legacy.dll": {}
+        }
+      },
+      "MongoDB.Bson/2.2.4": {
+        "runtime": {
+          "lib/net45/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4",
+          "MongoDB.Driver.Core": "2.2.4"
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.2.4": {
+        "dependencies": {
+          "MongoDB.Bson": "2.2.4"
+        },
+        "runtime": {
+          "lib/net45/MongoDB.Driver.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -2632,6 +2698,26 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ukQ/3NfpJNdaGSD1m7CaGNUh+Y5Ux/s9jnhM/m1ji0+i/XIocj5y7AZvMcTJDz3zNRIibclplDbxGSEWA0geVg=="
+    },
+    "mongocsharpdriver/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-90PAZhZ/vzKlmXwVUQxe5Pnh0eT3gMHAWj1+pZGX7n8oZMQXW4HgO7nOgTJVUF2d/IufoPMIzRMwqepW+AZgbw=="
+    },
+    "MongoDB.Bson/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q3TLxEVx5MsoXgqHqUFAh15kGJmgv1pvgXtm4/d9E22Ee8X9jVoPC8zIgIuQddO771Zbn9chJE+5QLfgxZl25Q=="
+    },
+    "MongoDB.Driver/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iWvQlPMSeA8oe7LqfgqZ0txY8+/Ns6qD/efR3tcMT4DgYT4W1vJZ4A8dfegeIZV3kKIiFA+L4ALgww5nfJtcBg=="
+    },
+    "MongoDB.Driver.Core/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gdqzKYas7RMBXt36N8UWTriVitRbX+8Y57yxdNDn6DzXe7aS1tcBofAtBO8FxOtmkGY3fD9CQUbqLLNDuAfjRQ=="
     },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
