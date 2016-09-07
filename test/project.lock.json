@@ -1297,6 +1297,15 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "NSubstitute/1.10.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NSubstitute.dll": {}
+        }
+      },
       "NuGet.Common/3.5.0-beta2-1484": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2165,10 +2174,10 @@
           "mongocsharpdriver": "2.2.4"
         },
         "compile": {
-          "net461/merodeTeamManagment.dll": {}
+          "net461/MerodeTeamManagment.dll": {}
         },
         "runtime": {
-          "net461/merodeTeamManagment.dll": {}
+          "net461/MerodeTeamManagment.dll": {}
         }
       }
     }
@@ -3287,6 +3296,26 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NSubstitute/1.10.0": {
+      "sha512": "EjtltQLY+h9Q5k+Qr/8rnR0/MUlTizF+LOHA8Y5uy4SzLAL1Yubuz1gW9qfisJEhsS2DPWoBym/1f3Huwr0E8w==",
+      "type": "package",
+      "path": "NSubstitute/1.10.0",
+      "files": [
+        "BreakingChanges.txt",
+        "CHANGELOG.txt",
+        "LICENSE.txt",
+        "NSubstitute.1.10.0.nupkg.sha512",
+        "NSubstitute.nuspec",
+        "README.txt",
+        "acknowledgements.txt",
+        "lib/net35/NSubstitute.XML",
+        "lib/net35/NSubstitute.dll",
+        "lib/net40/NSubstitute.XML",
+        "lib/net40/NSubstitute.dll",
+        "lib/net45/NSubstitute.XML",
+        "lib/net45/NSubstitute.dll"
       ]
     },
     "NuGet.Common/3.5.0-beta2-1484": {
@@ -6177,11 +6206,12 @@
     "merodeTeamManagment/1.0.0": {
       "type": "project",
       "path": "../src/merodeTeamManagment/project.json",
-      "msbuildProject": "../src/merodeTeamManagment/merodeTeamManagment.xproj"
+      "msbuildProject": "../src/merodeTeamManagment/MerodeTeamManagment.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "NSubstitute >= 1.10.0-*",
       "System.Runtime.Serialization.Primitives >= 4.1.1",
       "dotnet-test-xunit >= 2.2.0-preview2-build1029",
       "merodeTeamManagment >= 1.0.0-*",

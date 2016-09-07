@@ -1,5 +1,5 @@
---temp-output:c:\Dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\
---out:c:\Dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe
+--temp-output:c:\dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\
+--out:c:\dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe
 --define:DEBUG
 --define:TRACE
 --define:NET461
@@ -145,7 +145,11 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
---resource:"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\merodeTeamManagmentdotnet-compile.deps.json",merodeTeamManagment.deps.json
-c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Program.cs
-c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Startup.cs
-c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Controllers\ValuesController.cs
+--resource:"c:\dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\merodeTeamManagmentdotnet-compile.deps.json",merodeTeamManagment.deps.json
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Program.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Settings.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Startup.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Controllers\PlayerController.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Model\Player.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\IPlayerRepository.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\PlayerRepository.cs
