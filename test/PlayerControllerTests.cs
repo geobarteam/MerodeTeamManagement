@@ -2,6 +2,7 @@
 using System.Linq;
 using MerodeTeamManagment;
 using MerodeTeamManagment.Controllers;
+using MerodeTeamManagment.Repository;
 using Microsoft.Extensions.Options;
 using Xunit;
 
@@ -19,7 +20,8 @@ namespace MerodeTeamManagement.Test
         [Fact]
         public void GetPlayersForMerodeReturnsPlayerArray()
         {
-            var ctrl = new PlayerController(this.Settings);
+            var playerRepository = new PlayerRepository(this.Settings);
+            var ctrl = new PlayerController(playerRepository);
             var result = ctrl.Get("merode");
 
             Assert.True(result.Any());

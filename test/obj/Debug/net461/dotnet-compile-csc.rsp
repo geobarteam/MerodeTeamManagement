@@ -8,8 +8,8 @@
 -debug:portable
 -nostdlib
 -nologo
-"c:\dev\merodeTeamManagment\test\obj\Debug\net461\dotnet-compile.assemblyinfo.cs"
--out:"c:\dev\merodeTeamManagment\test\bin\Debug\net461\test.dll"
+"c:\Dev\merodeTeamManagment\test\obj\Debug\net461\dotnet-compile.assemblyinfo.cs"
+-out:"c:\Dev\merodeTeamManagment\test\bin\Debug\net461\test.dll"
 -r:"C:\Users\gvd8\.nuget\packages\dotnet-test-xunit\2.2.0-preview2-build1029\lib\net451\dotnet-test-xunit.exe"
 -r:"C:\Users\gvd8\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\gvd8\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll"
@@ -150,7 +150,7 @@
 -r:"C:\Users\gvd8\.nuget\packages\xunit.extensibility.execution\2.2.0-beta2-build3300\lib\net45\xunit.execution.desktop.dll"
 -r:"C:\Users\gvd8\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\net45\xunit.runner.reporters.desktop.dll"
 -r:"C:\Users\gvd8\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\net45\xunit.runner.utility.desktop.dll"
--r:"c:\dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe"
+-r:"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll"
@@ -161,4 +161,5 @@
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IO.Compression.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll"
-"c:\dev\merodeTeamManagment\test\PlayerControllerTests.cs"
+"c:\Dev\merodeTeamManagment\test\PlayerControllerTests.cs"
+"c:\Dev\merodeTeamManagment\test\TestFactory.cs"

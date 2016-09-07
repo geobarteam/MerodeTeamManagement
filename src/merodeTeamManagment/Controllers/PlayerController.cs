@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using MerodeTeamManagment.Model;
+using MerodeTeamManagment.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using MongoDB.Driver;
 
 namespace MerodeTeamManagment.Controllers
 {
     [Route("api/[controller]")]
     public class PlayerController : Controller
     {
-        private Settings _settings;
-        private IMongoDatabase _database;
+        private readonly IPlayerRepository _playerRepository;
 
-        public PlayerController(IOptions<Settings> settings)
+        public PlayerController(IPlayerRepository playerRepository)
         {
-            this._settings = settings.Value;
-            this._database = Connect();
+            _playerRepository = playerRepository;
         }
 
         // GET api/values
         [HttpGet]
         public IEnumerable<Player> Get(string teamName)
         {
-            var collection = this._database.GetCollection<Player>("players");
-            return collection.Find(_ => true).ToList();
+            return this._playerRepository.GetAll();
         }
 
         // GET api/values/5
@@ -54,12 +47,6 @@ namespace MerodeTeamManagment.Controllers
         {
         }
 
-        private IMongoDatabase Connect()
-        {
-            var client = new MongoClient(_settings.MongoConnection);
-            var database = client.GetDatabase(this._settings.Database);
-            
-            return database;
-        }
+       
     }
 }

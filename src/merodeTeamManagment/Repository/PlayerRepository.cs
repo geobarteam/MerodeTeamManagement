@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MerodeTeamManagment.Model;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace MerodeTeamManagment.Repository
 {
     public class PlayerRepository : IPlayerRepository
     {
+        private IMongoDatabase _database;
         private Settings _settings;
+
         public PlayerRepository(IOptions<Settings> settings)
         {
             this._settings = settings.Value;
+            this._database = Connect();
         }
 
         public void Add(Player player)
@@ -23,7 +25,8 @@ namespace MerodeTeamManagment.Repository
 
         public IEnumerable<Player> GetAll()
         {
-            throw new NotImplementedException();
+            var collection = this._database.GetCollection<Player>("players");
+            return collection.Find(_ => true).ToList();
         }
 
         public Player GetById(ObjectId id)
@@ -39,6 +42,14 @@ namespace MerodeTeamManagment.Repository
         public void Update(Player player)
         {
             throw new NotImplementedException();
+        }
+
+        private IMongoDatabase Connect()
+        {
+            var client = new MongoClient(_settings.MongoConnection);
+            var database = client.GetDatabase(this._settings.Database);
+
+            return database;
         }
     }
 }
