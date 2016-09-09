@@ -18,8 +18,9 @@ var DashboardComponent = (function () {
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.teamService.getPlayers("dummy").then(function (players) {
-            _this.players = players.slice(1, 5);
+        this.teamService.getPlayers("dummy")
+            .then(function (players) {
+            _this.players = players.slice(0, 4);
         });
     };
     DashboardComponent.prototype.gotoDetail = function (player) {

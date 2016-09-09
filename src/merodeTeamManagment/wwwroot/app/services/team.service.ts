@@ -19,7 +19,7 @@ export class TeamService {
   getPlayers(teamName:string):Promise<IPlayer[]>{
     return this.http.get(this.heroesUrl)
                .toPromise()
-               .then(response => response.json().data)
+               .then(response => response.json())
                .catch(this.handleError);
   }
 

@@ -19,10 +19,11 @@ export class DashboardComponent implements OnInit {
     
     }
     
-    ngOnInit(){
-        this.teamService.getPlayers("dummy").then(players=> {
-            this.players = players.slice(1, 5);
-        })
+    ngOnInit() {
+        this.teamService.getPlayers("dummy")
+            .then(players => {
+                this.players = players.slice(0, 4);
+            });
     }
     
     gotoDetail(player: IPlayer) {

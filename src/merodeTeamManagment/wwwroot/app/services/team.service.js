@@ -23,7 +23,7 @@ var TeamService = (function () {
     TeamService.prototype.getPlayers = function (teamName) {
         return this.http.get(this.heroesUrl)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     TeamService.prototype.getPlayer = function (name) {
