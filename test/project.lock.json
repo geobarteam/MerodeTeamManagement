@@ -6206,12 +6206,12 @@
     "merodeTeamManagment/1.0.0": {
       "type": "project",
       "path": "../src/merodeTeamManagment/project.json",
-      "msbuildProject": "../src/merodeTeamManagment/MerodeTeamManagment.xproj"
+      "msbuildProject": "../src/merodeTeamManagment/merodeTeamManagment.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "NSubstitute >= 1.10.0-*",
+      "NSubstitute >= 1.10.0",
       "System.Runtime.Serialization.Primitives >= 4.1.1",
       "dotnet-test-xunit >= 2.2.0-preview2-build1029",
       "merodeTeamManagment >= 1.0.0-*",

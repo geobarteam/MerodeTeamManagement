@@ -9,12 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_deprecated_1 = require('@angular/router-deprecated');
 var team_service_1 = require('../services/team.service');
 var PlayerAddComponent = (function () {
-    function PlayerAddComponent(teamService, routeParams) {
+    function PlayerAddComponent(teamService) {
         this.teamService = teamService;
-        this.routeParams = routeParams;
     }
     PlayerAddComponent.prototype.ngOnInit = function () {
     };
@@ -31,7 +29,7 @@ var PlayerAddComponent = (function () {
             templateUrl: 'app/team/player-add.component.html',
             styleUrls: ['./app/team/player-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [team_service_1.TeamService, router_deprecated_1.RouteParams])
+        __metadata('design:paramtypes', [team_service_1.TeamService])
     ], PlayerAddComponent);
     return PlayerAddComponent;
 }());

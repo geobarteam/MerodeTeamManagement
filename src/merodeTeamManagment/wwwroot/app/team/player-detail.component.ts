@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPlayer } from '../model/IPlayer';
-import { RouteParams } from '@angular/router-deprecated';
 import { TeamService } from '../services/team.service';
 
 
@@ -22,15 +21,14 @@ styleUrls:['./app/team/player-detail.component.css']
 export class PlayerDetailComponent implements OnInit {
   
   constructor(
-  private teamService: TeamService,
-  private routeParams: RouteParams) {
+  private teamService: TeamService) {
 }
       @Input() 
        player: IPlayer;
   
   ngOnInit(){
-    let name = this.routeParams.get('name');
-    this.teamService.getPlayer(name)
+    //let name = this.routeParams.get('name');
+    this.teamService.getPlayer('Geoffrey')
         .then(player=> this.player = player);
   }
   goBack() {

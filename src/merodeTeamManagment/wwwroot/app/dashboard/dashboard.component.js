@@ -10,10 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var team_service_1 = require('../services/team.service');
-var router_deprecated_1 = require('@angular/router-deprecated');
 var DashboardComponent = (function () {
-    function DashboardComponent(router, teamService) {
-        this.router = router;
+    function DashboardComponent(
+        // private router: Router,
+        teamService) {
         this.teamService = teamService;
     }
     DashboardComponent.prototype.ngOnInit = function () {
@@ -25,7 +25,7 @@ var DashboardComponent = (function () {
     };
     DashboardComponent.prototype.gotoDetail = function (player) {
         var link = ['PlayerDetail', { name: player.name }];
-        this.router.navigate(link);
+        //this.router.navigate(link);
     };
     DashboardComponent = __decorate([
         core_1.Component({
@@ -33,7 +33,7 @@ var DashboardComponent = (function () {
             templateUrl: 'app/dashboard/dashboard.component.html',
             styleUrls: ['./app/dashboard/dashboard.component.css']
         }), 
-        __metadata('design:paramtypes', [router_deprecated_1.Router, team_service_1.TeamService])
+        __metadata('design:paramtypes', [team_service_1.TeamService])
     ], DashboardComponent);
     return DashboardComponent;
 }());

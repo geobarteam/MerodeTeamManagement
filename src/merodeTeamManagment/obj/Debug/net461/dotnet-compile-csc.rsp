@@ -8,8 +8,8 @@
 -debug:full
 -nostdlib
 -nologo
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\dotnet-compile.assemblyinfo.cs"
--out:"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\dotnet-compile.assemblyinfo.cs"
+-out:"C:\dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe"
 -r:"C:\Users\gvd8\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\gvd8\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\gvd8\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\net451\Microsoft.AspNetCore.Cors.dll"
@@ -141,11 +141,11 @@
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll"
--resource:"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\merodeTeamManagmentdotnet-compile.deps.json",merodeTeamManagment.deps.json
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Program.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Settings.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Startup.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Controllers\PlayerController.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Model\Player.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Repository\IPlayerRepository.cs"
-"c:\Dev\merodeTeamManagment\src\merodeTeamManagment\Repository\PlayerRepository.cs"
+-resource:"C:\dev\merodeTeamManagment\src\merodeTeamManagment\obj\Debug\net461\merodeTeamManagmentdotnet-compile.deps.json",merodeTeamManagment.deps.json
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Program.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Settings.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Startup.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Controllers\PlayerController.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Model\Player.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\IPlayerRepository.cs"
+"C:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\PlayerRepository.cs"

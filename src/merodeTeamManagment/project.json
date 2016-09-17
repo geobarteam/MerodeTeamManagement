@@ -24,7 +24,10 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "compile": {
+      "exclude": [ "**/node_modules/" ]
+    }
   },
 
   "publishOptions": {
