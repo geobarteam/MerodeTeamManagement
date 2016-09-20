@@ -32,6 +32,9 @@ namespace merodeTeamManagment
             // Add framework services.
             services.AddMvc();
             services.Configure<Settings>(Configuration);
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                        .AllowAnyMethod()
+                                                                         .AllowAnyHeader()));
 
             services.AddSingleton<IPlayerRepository, PlayerRepository>();
         }
@@ -41,10 +44,11 @@ namespace merodeTeamManagment
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseCors("AllowAll");
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseMvc();
+            
         }
     }
 }

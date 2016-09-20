@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MerodeTeamManagment.Controllers
 {
+
     [Route("api/[controller]")]
     public class PlayerController : Controller
     {

@@ -10,14 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var team_service_1 = require('../services/team.service');
+var router_1 = require('@angular/router');
 var PlayerDetailComponent = (function () {
-    function PlayerDetailComponent(teamService) {
+    function PlayerDetailComponent(teamService, route, router) {
         this.teamService = teamService;
+        this.route = route;
+        this.router = router;
     }
     PlayerDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        //let name = this.routeParams.get('name');
-        this.teamService.getPlayer('Geoffrey')
+        var name = "";
+        this.route.params.forEach(function (params) {
+            name = params["name"];
+        });
+        this.teamService.getPlayer(name)
             .then(function (player) { return _this.player = player; });
     };
     PlayerDetailComponent.prototype.goBack = function () {
@@ -33,7 +39,7 @@ var PlayerDetailComponent = (function () {
             template: "\n  <div *ngIf=\"player\">\n    <h2>{{player.name}} details!</h2>\n    <div><label>id: </label>{{player.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"player.name\" placeholder=\"name\"/>\n    </div>\n    <button (click)=\"goBack()\">Back</button>\n  </div>\n",
             styleUrls: ['./app/team/player-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [team_service_1.TeamService])
+        __metadata('design:paramtypes', [team_service_1.TeamService, router_1.ActivatedRoute, router_1.Router])
     ], PlayerDetailComponent);
     return PlayerDetailComponent;
 }());

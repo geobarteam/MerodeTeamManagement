@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IPlayer } from '../model/IPlayer';
 import { TeamService } from '../services/team.service';
-
-
+import { Router }      from '@angular/router';
 
 @Component({
   selector: 'my-dashboard',
@@ -15,7 +14,8 @@ export class DashboardComponent implements OnInit {
     IDBEnvironment:string;
     constructor(
        // private router: Router,
-        private teamService:TeamService){
+        private teamService: TeamService,
+        private router: Router    ) {
     
     }
     
@@ -27,8 +27,9 @@ export class DashboardComponent implements OnInit {
     }
     
     gotoDetail(player: IPlayer) {
-        let link = ['PlayerDetail', { name: player.name }];
-        //this.router.navigate(link);
-        }
+        let link = ['/detail', player.name];
+        
+        this.router.navigate(link);
+    }
     
  }

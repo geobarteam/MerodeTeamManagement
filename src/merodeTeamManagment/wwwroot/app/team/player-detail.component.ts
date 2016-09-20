@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPlayer } from '../model/IPlayer';
 import { TeamService } from '../services/team.service';
-
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'player-detail',
@@ -21,14 +21,19 @@ styleUrls:['./app/team/player-detail.component.css']
 export class PlayerDetailComponent implements OnInit {
   
   constructor(
-  private teamService: TeamService) {
+      private teamService: TeamService,
+      private route: ActivatedRoute,
+      private router: Router  ) {
 }
       @Input() 
        player: IPlayer;
   
-  ngOnInit(){
-    //let name = this.routeParams.get('name');
-    this.teamService.getPlayer('Geoffrey')
+      ngOnInit() {
+       var name = "";
+       this.route.params.forEach((params: Params) => {
+           name = params["name"];
+       });
+      this.teamService.getPlayer(name)
         .then(player=> this.player = player);
   }
   goBack() {
