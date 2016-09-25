@@ -1,5 +1,5 @@
---temp-output:c:\Dev\merodeTeamManagment\test\obj\Debug\net461\
---out:c:\Dev\merodeTeamManagment\test\bin\Debug\net461\test.dll
+--temp-output:c:\dev\merodeTeamManagment\test\obj\Debug\net461\
+--out:c:\dev\merodeTeamManagment\test\bin\Debug\net461\test.dll
 --define:DEBUG
 --define:TRACE
 --define:NET461
@@ -153,7 +153,7 @@
 --reference:C:\Users\gvd8\.nuget\packages\xunit.extensibility.execution\2.2.0-beta2-build3300\lib\net45\xunit.execution.desktop.dll
 --reference:C:\Users\gvd8\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\net45\xunit.runner.reporters.desktop.dll
 --reference:C:\Users\gvd8\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\net45\xunit.runner.utility.desktop.dll
---reference:c:\Dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe
+--reference:c:\dev\merodeTeamManagment\src\merodeTeamManagment\bin\Debug\net461\merodeTeamManagment.exe
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll
@@ -164,5 +164,5 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IO.Compression.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
-c:\Dev\merodeTeamManagment\test\PlayerControllerTests.cs
-c:\Dev\merodeTeamManagment\test\TestFactory.cs
+c:\dev\merodeTeamManagment\test\PlayerControllerTests.cs
+c:\dev\merodeTeamManagment\test\TestFactory.cs
