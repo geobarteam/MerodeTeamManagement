@@ -150,6 +150,6 @@ c:\dev\merodeTeamManagment\src\merodeTeamManagment\Program.cs
 c:\dev\merodeTeamManagment\src\merodeTeamManagment\Settings.cs
 c:\dev\merodeTeamManagment\src\merodeTeamManagment\Startup.cs
 c:\dev\merodeTeamManagment\src\merodeTeamManagment\Controllers\PlayerController.cs
-c:\dev\merodeTeamManagment\src\merodeTeamManagment\Model\Player.cs
 c:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\IPlayerRepository.cs
 c:\dev\merodeTeamManagment\src\merodeTeamManagment\Repository\PlayerRepository.cs
+c:\dev\merodeTeamManagment\src\merodeTeamManagment\wwwroot\app\register\Model\Player.cs
