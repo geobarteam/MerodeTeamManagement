@@ -1,0 +1,5 @@
+#remove generated files
+/app/**/*.js
+/app/**/*.map
+libs/
+typings

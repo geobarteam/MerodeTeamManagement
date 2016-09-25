@@ -6,7 +6,7 @@
     System.config({
         paths: {
             // paths serve as alias
-            'npm:': 'node_modules/'
+            'npm:': 'libs/'
         },
         // map tells the System loader where to look for things
         map: {
@@ -25,7 +25,7 @@
 
             // other libraries
             'rxjs': 'npm:rxjs',
-            'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+            //'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
