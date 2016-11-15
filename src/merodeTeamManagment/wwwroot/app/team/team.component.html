@@ -3,7 +3,7 @@
        <li *ngFor="let player of team"
         [class.selected]="player === selectedPlayer"
         (click)="onSelect(player)">
-        <span class="badge">{{player.name}}</span> {{player.name}}
+        <span class="badge">{{player.firstName}}</span> {{player.lastName}}
       </li>
     </ul>
 <div>
@@ -11,7 +11,7 @@
 </div>
 <div *ngIf="selectedPlayer">
   <h2>
-    {{selectedPlayer.name | uppercase}} is my super player
+    {{selectedPlayer.firstName | uppercase}} is my super player
   </h2>
   <button (click)="gotoDetail(selectedPlayer)" class="btn-default">View Details</button>
 </div>

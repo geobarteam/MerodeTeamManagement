@@ -10,21 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var user_1 = require('../model/user');
+var team_service_1 = require('../services/team.service');
+var router_1 = require('@angular/router');
 var RegisterComponent = (function () {
-    function RegisterComponent() {
+    function RegisterComponent(
+        // private router: Router,
+        teamService, router) {
+        this.teamService = teamService;
+        this.router = router;
     }
     RegisterComponent.prototype.ngOnInit = function () {
         this.user = new user_1.User();
     };
     RegisterComponent.prototype.submit = function (user) {
-        console.debug(user.email);
+        console.log("User " + user.email + " created!");
+        this.user = new user_1.User();
     };
     RegisterComponent = __decorate([
         core_1.Component({
             selector: 'register-component',
             templateUrl: 'app/register/register.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [team_service_1.TeamService, router_1.Router])
     ], RegisterComponent);
     return RegisterComponent;
 }());

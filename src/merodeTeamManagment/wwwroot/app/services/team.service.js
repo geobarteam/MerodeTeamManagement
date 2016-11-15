@@ -26,9 +26,17 @@ var TeamService = (function () {
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    TeamService.prototype.getPlayer = function (name) {
+    TeamService.prototype.getPlayer = function (email) {
         return this.getPlayers('merode')
-            .then(function (players) { return players.filter(function (player) { return player.name === name; })[0]; });
+            .then(function (players) { return players.filter(function (player) { return player.email === email; })[0]; });
+    };
+    TeamService.prototype.addPlayer = function (player) {
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(this.heroesUrl, player, options)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
     };
     TeamService.prototype.handleError = function (error) {
         console.error('An error occurred', error);

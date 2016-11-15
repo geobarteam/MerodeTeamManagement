@@ -4,6 +4,7 @@ import { IPlayer } from '../model/IPlayer';
 import { PlayerDetailComponent } from './player-detail.component';
 import { TeamService } from '../services/team.service'
 import { OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -16,7 +17,9 @@ export class TeamComponent implements OnInit {
     
     team:IPlayer[];
     constructor(
- private teamService: TeamService){
+        private teamService: TeamService,
+        private router: Router
+    ) {
       
     }
     ngOnInit(){
@@ -33,11 +36,11 @@ export class TeamComponent implements OnInit {
     }
     
     gotoDetail(player: IPlayer) {
-        let link = ['PlayerDetail', { name: player.name }];
-       // this.router.navigate(link);
+        let link = ['playerDetail', { name: player.lastName }];
+        this.router.navigate(link);
         }
     gotoAddPlayer(){
-        let link = ['AddPlayer'];
-        //this.router.navigate(link);
+        let link = ['addPlayer'];
+        this.router.navigate(link);
     }
 }

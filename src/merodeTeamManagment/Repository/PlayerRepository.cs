@@ -18,9 +18,11 @@ namespace MerodeTeamManagment.Repository
             this._database = Connect();
         }
 
-        public void Add(Player player)
+        public Player Add(Player player)
         {
-            throw new NotImplementedException();
+            var collection = this._database.GetCollection<Player>("players");
+            collection.InsertOne(player);
+            return player;
         }
 
         public IEnumerable<Player> GetAll()

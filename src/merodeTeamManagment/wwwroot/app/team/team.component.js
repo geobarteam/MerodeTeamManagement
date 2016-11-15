@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var team_service_1 = require('../services/team.service');
+var router_1 = require('@angular/router');
 var TeamComponent = (function () {
-    function TeamComponent(teamService) {
+    function TeamComponent(teamService, router) {
         this.teamService = teamService;
+        this.router = router;
         this.title = 'Tour of players';
     }
     TeamComponent.prototype.ngOnInit = function () {
@@ -23,12 +25,12 @@ var TeamComponent = (function () {
         this.selectedPlayer = player;
     };
     TeamComponent.prototype.gotoDetail = function (player) {
-        var link = ['PlayerDetail', { name: player.name }];
-        // this.router.navigate(link);
+        var link = ['playerDetail', { name: player.lastName }];
+        this.router.navigate(link);
     };
     TeamComponent.prototype.gotoAddPlayer = function () {
-        var link = ['AddPlayer'];
-        //this.router.navigate(link);
+        var link = ['addPlayer'];
+        this.router.navigate(link);
     };
     TeamComponent = __decorate([
         core_1.Component({
@@ -36,7 +38,7 @@ var TeamComponent = (function () {
             templateUrl: 'app/team/team.component.html',
             styleUrls: ['./app/team/team.component.css']
         }), 
-        __metadata('design:paramtypes', [team_service_1.TeamService])
+        __metadata('design:paramtypes', [team_service_1.TeamService, router_1.Router])
     ], TeamComponent);
     return TeamComponent;
 }());

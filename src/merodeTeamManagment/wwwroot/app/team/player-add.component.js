@@ -10,14 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var team_service_1 = require('../services/team.service');
+var router_1 = require('@angular/router');
 var PlayerAddComponent = (function () {
-    function PlayerAddComponent(teamService) {
+    function PlayerAddComponent(teamService, router) {
         this.teamService = teamService;
+        this.router = router;
+        this.player = { firstName: "", lastName: "", email: "" };
     }
     PlayerAddComponent.prototype.ngOnInit = function () {
     };
     PlayerAddComponent.prototype.goBack = function () {
         window.history.back();
+    };
+    PlayerAddComponent.prototype.save = function () {
+        this.teamService.addPlayer(this.player);
+        var link = ['team'];
+        this.router.navigate(link);
     };
     __decorate([
         core_1.Input(), 
@@ -29,7 +37,7 @@ var PlayerAddComponent = (function () {
             templateUrl: 'app/team/player-add.component.html',
             styleUrls: ['./app/team/player-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [team_service_1.TeamService])
+        __metadata('design:paramtypes', [team_service_1.TeamService, router_1.Router])
     ], PlayerAddComponent);
     return PlayerAddComponent;
 }());

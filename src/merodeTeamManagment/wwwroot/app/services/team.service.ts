@@ -1,6 +1,7 @@
 import { IPlayer } from '../model/IPlayer';
-import { Injectable }    from '@angular/core';
-import {Http, Headers, Response} from '@angular/http';
+import { User } from '../model/user';
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import "rxjs/add/operator/toPromise";
 
@@ -23,9 +24,18 @@ export class TeamService {
                .catch(this.handleError);
   }
 
-  getPlayer(name: string) {
-    return this.getPlayers('merode')
-               .then(players => players.filter(player => player.name === name)[0]);
+  getPlayer(email: string) {
+      return this.getPlayers('merode')
+          .then(players => players.filter(player => player.email === email)[0]);
+  }
+
+  addPlayer(player: IPlayer):Promise<IPlayer> {
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+      return this.http.post(this.heroesUrl, player, options)
+          .toPromise()
+          .then(response => response.json())
+          .catch(this.handleError);
   }
 
   

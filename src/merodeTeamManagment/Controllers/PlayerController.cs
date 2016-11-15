@@ -32,9 +32,9 @@ namespace MerodeTeamManagment.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post(Player player)
+        public void Post([FromBody]Player player)
         {
-            
+            this._playerRepository.Add(player);
         }
 
         // PUT api/values/5

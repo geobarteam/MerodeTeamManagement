@@ -13,21 +13,20 @@ export class DashboardComponent implements OnInit {
     players: IPlayer[];
     IDBEnvironment:string;
     constructor(
-       // private router: Router,
         private teamService: TeamService,
         private router: Router    ) {
     
     }
     
     ngOnInit() {
-        this.teamService.getPlayers("dummy")
+        this.teamService.getPlayers("merode")
             .then(players => {
                 this.players = players.slice(0, 4);
             });
     }
     
     gotoDetail(player: IPlayer) {
-        let link = ['/detail', player.name];
+        let link = ['/detail', player.email];
         
         this.router.navigate(link);
     }

@@ -15,15 +15,13 @@ var TeamService = (function () {
     TeamService.prototype.getPlayers = function (teamName) {
         return new Promise(function (resolve, rejected) {
             var players = new Array();
-            players.push({ name: "Geoffrey" });
-            players.push({ name: "Tanguy" });
-            players.push({ name: "Ben" });
+            players.push({ firstName: "Geoffrey", lastName: "Vandiest", email: "gvd8@hotmail.com" });
             resolve(players);
         });
     };
-    TeamService.prototype.getPlayer = function (name) {
+    TeamService.prototype.getPlayer = function (email) {
         return this.getPlayers('merode')
-            .then(function (players) { return players.filter(function (player) { return player.name === name; })[0]; });
+            .then(function (players) { return players.filter(function (player) { return player.email === email; })[0]; });
     };
     TeamService = __decorate([
         core_1.Injectable(), 

@@ -19,11 +19,11 @@ var PlayerDetailComponent = (function () {
     }
     PlayerDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var name = "";
+        var email = "";
         this.route.params.forEach(function (params) {
-            name = params["name"];
+            email = params["email"];
         });
-        this.teamService.getPlayer(name)
+        this.teamService.getPlayer(email)
             .then(function (player) { return _this.player = player; });
     };
     PlayerDetailComponent.prototype.goBack = function () {
@@ -36,7 +36,7 @@ var PlayerDetailComponent = (function () {
     PlayerDetailComponent = __decorate([
         core_1.Component({
             selector: 'player-detail',
-            template: "\n  <div *ngIf=\"player\">\n    <h2>{{player.name}} details!</h2>\n    <div><label>id: </label>{{player.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"player.name\" placeholder=\"name\"/>\n    </div>\n    <button (click)=\"goBack()\">Back</button>\n  </div>\n",
+            template: "\n  <div *ngIf=\"player\">\n    <h2>{{player.name}} details!</h2>\n    <div><label>id: </label>{{player.id}}</div>\n    <div>\n      <label>firstName: </label>\n      <input [(ngModel)]=\"player.firstName\" placeholder=\"FirstName\"/>\n    </div>\n    <div>\n      <label>lastName: </label>\n      <input [(ngModel)]=\"player.lastName\" placeholder=\"name\"/>\n    </div>\n    <div>\n      <label>email: </label>\n      <input [(ngModel)]=\"player.email\" placeholder=\"name\"/>\n    </div>\n    <button (click)=\"goBack()\">Back</button>\n  </div>\n",
             styleUrls: ['./app/team/player-detail.component.css']
         }), 
         __metadata('design:paramtypes', [team_service_1.TeamService, router_1.ActivatedRoute, router_1.Router])

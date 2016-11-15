@@ -13,7 +13,7 @@ namespace MerodeTeamManagment.Repository
 
         Player GetById(ObjectId id);
 
-        void Add(Player player);
+        Player Add(Player player);
 
         void Update(Player player);
 

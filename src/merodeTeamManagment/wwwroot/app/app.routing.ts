@@ -26,13 +26,18 @@ const appRoutes: Routes = [
         component: RegisterComponent,
     },
     {
-        path: 'detail/:name',
+        path: 'detail/:email',
         component: PlayerDetailComponent
     },
     {
-        path: 'add',
+        path: 'addPlayer',
+        component: PlayerAddComponent
+    },
+    {
+        path: 'AddPlayer',
         component: PlayerAddComponent
     }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

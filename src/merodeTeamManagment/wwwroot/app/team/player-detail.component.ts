@@ -10,8 +10,16 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
     <h2>{{player.name}} details!</h2>
     <div><label>id: </label>{{player.id}}</div>
     <div>
-      <label>name: </label>
-      <input [(ngModel)]="player.name" placeholder="name"/>
+      <label>firstName: </label>
+      <input [(ngModel)]="player.firstName" placeholder="FirstName"/>
+    </div>
+    <div>
+      <label>lastName: </label>
+      <input [(ngModel)]="player.lastName" placeholder="name"/>
+    </div>
+    <div>
+      <label>email: </label>
+      <input [(ngModel)]="player.email" placeholder="name"/>
     </div>
     <button (click)="goBack()">Back</button>
   </div>
@@ -29,11 +37,11 @@ export class PlayerDetailComponent implements OnInit {
        player: IPlayer;
   
       ngOnInit() {
-       var name = "";
+       var email = "";
        this.route.params.forEach((params: Params) => {
-           name = params["name"];
+           email = params["email"];
        });
-      this.teamService.getPlayer(name)
+       this.teamService.getPlayer(email)
         .then(player=> this.player = player);
   }
   goBack() {

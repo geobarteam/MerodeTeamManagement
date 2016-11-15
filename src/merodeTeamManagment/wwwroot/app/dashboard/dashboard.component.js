@@ -12,21 +12,19 @@ var core_1 = require('@angular/core');
 var team_service_1 = require('../services/team.service');
 var router_1 = require('@angular/router');
 var DashboardComponent = (function () {
-    function DashboardComponent(
-        // private router: Router,
-        teamService, router) {
+    function DashboardComponent(teamService, router) {
         this.teamService = teamService;
         this.router = router;
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.teamService.getPlayers("dummy")
+        this.teamService.getPlayers("merode")
             .then(function (players) {
             _this.players = players.slice(0, 4);
         });
     };
     DashboardComponent.prototype.gotoDetail = function (player) {
-        var link = ['/detail', player.name];
+        var link = ['/detail', player.email];
         this.router.navigate(link);
     };
     DashboardComponent = __decorate([

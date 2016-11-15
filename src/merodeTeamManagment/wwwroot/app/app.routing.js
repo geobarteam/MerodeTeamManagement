@@ -23,11 +23,15 @@ var appRoutes = [
         component: register_component_1.RegisterComponent,
     },
     {
-        path: 'detail/:name',
+        path: 'detail/:email',
         component: player_detail_component_1.PlayerDetailComponent
     },
     {
-        path: 'add',
+        path: 'addPlayer',
+        component: player_add_component_1.PlayerAddComponent
+    },
+    {
+        path: 'AddPlayer',
         component: player_add_component_1.PlayerAddComponent
     }
 ];

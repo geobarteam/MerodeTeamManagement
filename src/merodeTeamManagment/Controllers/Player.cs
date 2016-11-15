@@ -11,7 +11,13 @@ namespace MerodeTeamManagment.Model
     {
         public ObjectId Id { get; set; }
 
-        [BsonElement("name")]
-        public string Name { get; set; }
+        [BsonElement("firstName")]
+        public string FirstName { get; set; }
+
+        [BsonElement("lastName")]
+        public string LastName { get; set; }
+
+        [BsonElement("email")]
+        public string Email { get; set; }
     }
 }
