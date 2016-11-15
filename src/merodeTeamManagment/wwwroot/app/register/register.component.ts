@@ -3,7 +3,7 @@ import { User } from '../model/user';
 
 @Component({
   selector: 'register-component',
-  templateUrl: 'app/register/register.html'
+  templateUrl: 'app/register/register.component.html'
 })
 export class RegisterComponent implements OnInit {
      

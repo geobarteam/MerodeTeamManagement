@@ -22,7 +22,7 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         core_1.Component({
             selector: 'register-component',
-            templateUrl: 'app/register/register.html'
+            templateUrl: 'app/register/register.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], RegisterComponent);

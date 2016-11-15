@@ -9,8 +9,8 @@ import { OnInit } from '@angular/core';
 
 @Component({
     selector: 'my-team',
-    templateUrl: 'app/team/team.html',
-    styleUrls: ['./app/team/team.css']
+    templateUrl: 'app/team/team.component.html',
+    styleUrls: ['./app/team/team.component.css']
 })
 export class TeamComponent implements OnInit { 
     

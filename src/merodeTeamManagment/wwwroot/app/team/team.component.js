@@ -33,8 +33,8 @@ var TeamComponent = (function () {
     TeamComponent = __decorate([
         core_1.Component({
             selector: 'my-team',
-            templateUrl: 'app/team/team.html',
-            styleUrls: ['./app/team/team.css']
+            templateUrl: 'app/team/team.component.html',
+            styleUrls: ['./app/team/team.component.css']
         }), 
         __metadata('design:paramtypes', [team_service_1.TeamService])
     ], TeamComponent);
